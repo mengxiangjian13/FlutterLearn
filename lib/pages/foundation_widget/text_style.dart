@@ -78,7 +78,28 @@ class TextStylePage extends StatelessWidget {
                 )
               ]
             )
-          )
+          ),
+          const Padding(padding: EdgeInsets.only(top: 20)),
+          const Text(
+            'DefaultTextStyle',
+            textScaleFactor: 2,
+          ),
+          // 用DefaultTextStyle包裹，之中的所有Text都继承DefaultTextStyle
+          DefaultTextStyle(style: const TextStyle(
+            color: Colors.red,
+            fontSize: 15,
+          ), child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text('Hello, world'),
+              Text('I am mengxiangjian'),
+              // 可以覆盖DefaultTextStyle，自定义style生效
+              Text('override text', style: TextStyle(
+                fontSize: 10,
+                color: Colors.grey
+              ),)
+            ],
+          ), textAlign: TextAlign.start,),
         ],
       ),
     );
