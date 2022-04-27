@@ -29,7 +29,7 @@ class TextStylePage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Text(
-            "hello, world! I'm Leo. "*16, // 16遍字符串连接在一起
+            "hello, world! I'm Leo. " * 16, // 16遍字符串连接在一起
             maxLines: 1,
             overflow: TextOverflow.ellipsis, // 截断方式，截断处 ...
           ),
@@ -59,47 +59,48 @@ class TextStylePage extends StatelessWidget {
             'TextSpan',
             textScaleFactor: 2,
           ),
-          Text.rich( // Text.rich 包裹
-            // TextSpan，类似AttributedString，富文本。还可以添加手势。
-             TextSpan(
-              children: [
-                const TextSpan(
-                  text: 'hello, ',
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                ),
-                TextSpan(
-                  text: 'click mengxiangjian.com',
-                  style: const TextStyle(
-                    color: Colors.blue,
-                  ),
-                  recognizer: tap,
-                )
-              ]
+          Text.rich(// Text.rich 包裹
+              // TextSpan，类似AttributedString，富文本。还可以添加手势。
+              TextSpan(children: [
+            const TextSpan(
+              text: 'hello, ',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+            TextSpan(
+              text: 'click mengxiangjian.com',
+              style: const TextStyle(
+                color: Colors.blue,
+              ),
+              recognizer: tap,
             )
-          ),
+          ])),
           const Padding(padding: EdgeInsets.only(top: 20)),
           const Text(
             'DefaultTextStyle',
             textScaleFactor: 2,
           ),
           // 用DefaultTextStyle包裹，之中的所有Text都继承DefaultTextStyle
-          DefaultTextStyle(style: const TextStyle(
-            color: Colors.red,
-            fontSize: 15,
-          ), child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text('Hello, world'),
-              Text('I am mengxiangjian'),
-              // 可以覆盖DefaultTextStyle，自定义style生效
-              Text('override text', style: TextStyle(
-                fontSize: 10,
-                color: Colors.grey
-              ),)
-            ],
-          ), textAlign: TextAlign.start,),
+          DefaultTextStyle(
+            style: const TextStyle(
+              color: Colors.red,
+              fontSize: 15,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text('Hello, world'),
+                Text('I am mengxiangjian'),
+                // 可以覆盖DefaultTextStyle，自定义style生效
+                Text(
+                  'override text',
+                  style: TextStyle(fontSize: 10, color: Colors.grey),
+                )
+              ],
+            ),
+            textAlign: TextAlign.start,
+          ),
         ],
       ),
     );
