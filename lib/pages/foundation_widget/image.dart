@@ -49,7 +49,8 @@ class ImagePage extends StatelessWidget {
             width: 100,
             height: 200,
             repeat: ImageRepeat.repeatY,
-          )
+          ),
+          Image.network('https://avatars2.githubusercontent.com/u/20411648?s=460&v=4', width: 100,)
         ].map((e) {
           return Row(
             children: [
