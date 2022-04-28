@@ -56,13 +56,16 @@ class ButtonPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ElevatedButton.icon(onPressed: (){},
+              ElevatedButton.icon(
+                  onPressed: () {},
                   icon: const Icon(Icons.send),
                   label: const Text('发送')),
-              TextButton.icon(onPressed: () {},
+              TextButton.icon(
+                  onPressed: () {},
                   icon: const Icon(Icons.info),
                   label: const Text('详情')),
-              OutlinedButton.icon(onPressed: () {},
+              OutlinedButton.icon(
+                  onPressed: () {},
                   icon: const Icon(Icons.add),
                   label: const Text('添加'))
             ],

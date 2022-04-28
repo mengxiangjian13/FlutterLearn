@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/pages/foundation_widget/image.dart';
 import 'package:flutter_learn/pages/foundation_widget/text_style.dart';
 import 'package:flutter_learn/pages/foundation_widget/button.dart';
 
 class FoundationWidgetPage extends StatelessWidget {
-  final List<String> contents = ['文本及样式', '按钮'];
+  final List<String> contents = ['文本及样式', '按钮', '图片及Icon'];
 
   FoundationWidgetPage({Key? key}) : super(key: key);
 
   Widget _pageWidget(int index) {
     if (index == 0) {
       return TextStylePage(title: contents[index]);
+    } else if (index == 2) {
+      return ImagePage(title: contents[index]);
     }
     return ButtonPage(title: contents[index]);
   }
