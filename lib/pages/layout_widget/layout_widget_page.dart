@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/pages/layout_widget/constraints.dart';
 import 'package:flutter_learn/pages/layout_widget/row_layout.dart';
+import 'package:flutter_learn/pages/layout_widget/column_layout.dart';
 
 class LayoutWidgetPage extends StatelessWidget {
   final String title;
   LayoutWidgetPage({Key? key, required this.title}) : super(key: key);
   final List<String> contents = [
     'Constrains',
-    'Row'
+    'Row',
+    'Column'
   ];
 
   @override
@@ -42,6 +44,12 @@ class LayoutWidgetPage extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => RowLayoutPage(title: contents[index]))
+        );
+        break;
+      case 2:
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ColumnLayoutPage(title: contents[index]))
         );
         break;
     }
