@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/pages/layout_widget/consraints.dart';
+import 'package:flutter_learn/pages/layout_widget/constraints.dart';
 
 class LayoutWidgetPage extends StatelessWidget {
   final String title;
