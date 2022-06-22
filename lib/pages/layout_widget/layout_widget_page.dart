@@ -3,6 +3,8 @@ import 'package:flutter_learn/pages/layout_widget/constraints.dart';
 import 'package:flutter_learn/pages/layout_widget/row_layout.dart';
 import 'package:flutter_learn/pages/layout_widget/column_layout.dart';
 import 'package:flutter_learn/pages/layout_widget/flex_layout.dart';
+import 'package:flutter_learn/pages/layout_widget/wrap_layout.dart';
+import 'package:flutter_learn/pages/layout_widget/flow_layout.dart';
 
 class LayoutWidgetPage extends StatelessWidget {
   final String title;
@@ -11,7 +13,9 @@ class LayoutWidgetPage extends StatelessWidget {
     'Constrains',
     'Row',
     'Column',
-    'Flex'
+    'Flex',
+    'Wrap',
+    'Flow'
   ];
 
   @override
@@ -58,6 +62,18 @@ class LayoutWidgetPage extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => FlexLayoutPage(title: contents[index]))
+        );
+        break;
+      case 4:
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => WrapLayoutPage(title: contents[index]))
+        );
+        break;
+      case 5:
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => FlowLayoutPage(title: contents[index]))
         );
         break;
     }
