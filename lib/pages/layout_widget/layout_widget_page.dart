@@ -7,6 +7,7 @@ import 'package:flutter_learn/pages/layout_widget/wrap_layout.dart';
 import 'package:flutter_learn/pages/layout_widget/flow_layout.dart';
 import 'package:flutter_learn/pages/layout_widget/stack_layout.dart';
 import 'package:flutter_learn/pages/layout_widget/align_layout.dart';
+import 'package:flutter_learn/pages/layout_widget/layout_builder.dart';
 
 class LayoutWidgetPage extends StatelessWidget {
   final String title;
@@ -19,7 +20,8 @@ class LayoutWidgetPage extends StatelessWidget {
     'Wrap',
     'Flow',
     'Stack & Positioned',
-    'Align'
+    'Align',
+    'Layout Builder'
   ];
 
   @override
@@ -90,6 +92,12 @@ class LayoutWidgetPage extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => AlignLayoutPage(title: contents[index]))
+        );
+        break;
+      case 8:
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => LayoutBuilderPage(title: contents[index]))
         );
         break;
     }
