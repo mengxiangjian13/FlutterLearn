@@ -5,6 +5,7 @@ import 'package:flutter_learn/pages/layout_widget/column_layout.dart';
 import 'package:flutter_learn/pages/layout_widget/flex_layout.dart';
 import 'package:flutter_learn/pages/layout_widget/wrap_layout.dart';
 import 'package:flutter_learn/pages/layout_widget/flow_layout.dart';
+import 'package:flutter_learn/pages/layout_widget/stack_layout.dart';
 
 class LayoutWidgetPage extends StatelessWidget {
   final String title;
@@ -15,7 +16,8 @@ class LayoutWidgetPage extends StatelessWidget {
     'Column',
     'Flex',
     'Wrap',
-    'Flow'
+    'Flow',
+    'Stack & Positioned'
   ];
 
   @override
@@ -74,6 +76,12 @@ class LayoutWidgetPage extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => FlowLayoutPage(title: contents[index]))
+        );
+        break;
+      case 6:
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => StackLayoutPage(title: contents[index]))
         );
         break;
     }
