@@ -7,11 +7,9 @@ class FormPage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => _FormPageState();
-
 }
 
 class _FormPageState extends State<FormPage> {
-
   final TextEditingController _userController = TextEditingController();
   final TextEditingController _pwdController = TextEditingController();
 
@@ -48,64 +46,63 @@ class _FormPageState extends State<FormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Form(
-        autovalidateMode: AutovalidateMode.onUserInteraction,
-        child: Column(
-          children: [
-            TextFormField(
-              autofocus: true,
-              controller: _userController,
-              decoration: const InputDecoration(
-                labelText: '用户名',
-                hintText: '输入用户名',
-                prefixIcon: Icon(Icons.person),
-              ),
-              validator: (v) {
-                return _usernameValidate() ? null : '用户名不能为空';
-              },
-            ),
-            TextFormField(
-              controller: _pwdController,
-              decoration: const InputDecoration(
-                labelText: '密码',
-                hintText: '请输入密码',
-                prefixIcon: Icon(Icons.lock),
-              ),
-              obscureText: true,
-              validator: (v) {
-                return _pwdValidate() ? null : '密码不能少于6位';
-              },
-            ),
-            Padding(
-                padding: const EdgeInsets.all(16),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: _dataValid ? () {
-                          if (_usernameValidate() && _pwdValidate()) {
-                            if (kDebugMode) {
-                              print('form valid');
-                            }
-                          } else {
-                            if (kDebugMode) {
-                              print('form invalid');
-                            }
-                          }
-                        } : null,
-                        child: const Text('登录'),
-                      ),
-                    )
-                  ],
-                )
-            )
-
-          ],
+        appBar: AppBar(
+          title: Text(widget.title),
         ),
-      )
-    );
+        body: Form(
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          child: Column(
+            children: [
+              TextFormField(
+                autofocus: true,
+                controller: _userController,
+                decoration: const InputDecoration(
+                  labelText: '用户名',
+                  hintText: '输入用户名',
+                  prefixIcon: Icon(Icons.person),
+                ),
+                validator: (v) {
+                  return _usernameValidate() ? null : '用户名不能为空';
+                },
+              ),
+              TextFormField(
+                controller: _pwdController,
+                decoration: const InputDecoration(
+                  labelText: '密码',
+                  hintText: '请输入密码',
+                  prefixIcon: Icon(Icons.lock),
+                ),
+                obscureText: true,
+                validator: (v) {
+                  return _pwdValidate() ? null : '密码不能少于6位';
+                },
+              ),
+              Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: _dataValid
+                              ? () {
+                                  if (_usernameValidate() && _pwdValidate()) {
+                                    if (kDebugMode) {
+                                      print('form valid');
+                                    }
+                                  } else {
+                                    if (kDebugMode) {
+                                      print('form invalid');
+                                    }
+                                  }
+                                }
+                              : null,
+                          child: const Text('登录'),
+                        ),
+                      )
+                    ],
+                  ))
+            ],
+          ),
+        ));
   }
 }

@@ -12,10 +12,7 @@ class ColumnLayoutPage extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          Text('hi'),
-          Text('Hello, world!')
-        ],
+        children: const [Text('hi'), Text('Hello, world!')],
       ),
     );
   }

@@ -17,24 +17,18 @@ class StackLayoutPage extends StatelessWidget {
           children: const [
             Positioned(
               left: 20,
-              child: Text(
-                  'Hello, world!'
-              ),
+              child: Text('Hello, world!'),
             ),
             Positioned(
               child: Text(
                 'Hello, world!',
-                style: TextStyle(
-                  color: Colors.white,
-                  backgroundColor: Colors.red
-                ),
+                style:
+                    TextStyle(color: Colors.white, backgroundColor: Colors.red),
               ),
             ),
             Positioned(
               top: 20,
-              child: Text(
-                'Hello, world!'
-              ),
+              child: Text('Hello, world!'),
             )
           ],
         ),

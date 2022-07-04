@@ -7,17 +7,13 @@ class AlignLayoutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          title
-        ),
+        title: Text(title),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           DecoratedBox(
-            decoration: BoxDecoration(
-              color: Colors.red
-            ),
+            decoration: BoxDecoration(color: Colors.red),
             child: Align(
               heightFactor: 2,
               alignment: Alignment.topRight,
@@ -27,9 +23,7 @@ class AlignLayoutPage extends StatelessWidget {
             ),
           ),
           DecoratedBox(
-            decoration: BoxDecoration(
-              color: Colors.yellow
-            ),
+            decoration: BoxDecoration(color: Colors.yellow),
             child: Align(
               widthFactor: 2,
               heightFactor: 2,

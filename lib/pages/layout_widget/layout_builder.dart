@@ -6,7 +6,8 @@ class ResponsiveColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 约束宽度小于200，layout一列；约束宽度大于200，layout两列
-    return LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
+    return LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
       if (constraints.maxWidth < 200) {
         return Column(
           mainAxisSize: MainAxisSize.min,
@@ -44,9 +45,7 @@ class LayoutBuilderPage extends StatelessWidget {
     List<Widget> _children = List.filled(6, const Text('A'));
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          title
-        ),
+        title: Text(title),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

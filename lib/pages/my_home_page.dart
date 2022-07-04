@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/pages/foundation_widget//foundation_widget.dart';
 import 'package:flutter_learn/pages/layout_widget/layout_widget_page.dart';
+import 'package:flutter_learn/pages/container_widget/container_Widget_page.dart';
 
 class MyHomePage extends StatelessWidget {
   final String title;
 
   MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  final List<String> contents = ['基础组件', '布局类组件'];
+  final List<String> contents = ['基础组件', '布局类组件', '容器类组件'];
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +41,16 @@ class MyHomePage extends StatelessWidget {
       case 1:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => LayoutWidgetPage(title: contents[index])),
+          MaterialPageRoute(
+              builder: (context) => LayoutWidgetPage(title: contents[index])),
         );
+        break;
+      case 2:
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    ContainerWidgetPage(title: contents[index])));
         break;
     }
   }

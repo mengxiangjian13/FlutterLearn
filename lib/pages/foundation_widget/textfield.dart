@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldPage extends StatefulWidget {
-
   const TextFieldPage({Key? key, required this.title}) : super(key: key);
   final String title;
 
@@ -11,7 +10,6 @@ class TextFieldPage extends StatefulWidget {
 }
 
 class _TextFieldPageState extends State<TextFieldPage> {
-
   final TextEditingController _controller = TextEditingController();
   FocusNode focusNode1 = FocusNode();
   FocusNode focusNode2 = FocusNode();
@@ -70,17 +68,21 @@ class _TextFieldPageState extends State<TextFieldPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TextButton(onPressed: (){
-                  if (focusNode1.hasFocus) {
-                    FocusScope.of(context).requestFocus(focusNode2);
-                  } else {
-                    FocusScope.of(context).requestFocus(focusNode1);
-                  }
-                }, child: const Text('移动焦点')),
-                TextButton(onPressed: (){
-                  focusNode1.unfocus();
-                  focusNode2.unfocus();
-                }, child: const Text('隐藏键盘')),
+                TextButton(
+                    onPressed: () {
+                      if (focusNode1.hasFocus) {
+                        FocusScope.of(context).requestFocus(focusNode2);
+                      } else {
+                        FocusScope.of(context).requestFocus(focusNode1);
+                      }
+                    },
+                    child: const Text('移动焦点')),
+                TextButton(
+                    onPressed: () {
+                      focusNode1.unfocus();
+                      focusNode2.unfocus();
+                    },
+                    child: const Text('隐藏键盘')),
               ],
             ),
           ),
@@ -100,5 +102,4 @@ class _TextFieldPageState extends State<TextFieldPage> {
       ),
     );
   }
-
 }

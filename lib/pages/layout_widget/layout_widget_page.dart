@@ -48,57 +48,60 @@ class LayoutWidgetPage extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => ConstraintLayoutPage(title: contents[index]))
-        );
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    ConstraintLayoutPage(title: contents[index])));
         break;
       case 1:
         Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => RowLayoutPage(title: contents[index]))
-        );
+            context,
+            MaterialPageRoute(
+                builder: (context) => RowLayoutPage(title: contents[index])));
         break;
       case 2:
         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => ColumnLayoutPage(title: contents[index]))
-        );
+            MaterialPageRoute(
+                builder: (context) =>
+                    ColumnLayoutPage(title: contents[index])));
         break;
       case 3:
         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => FlexLayoutPage(title: contents[index]))
-        );
+            MaterialPageRoute(
+                builder: (context) => FlexLayoutPage(title: contents[index])));
         break;
       case 4:
         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => WrapLayoutPage(title: contents[index]))
-        );
+            MaterialPageRoute(
+                builder: (context) => WrapLayoutPage(title: contents[index])));
         break;
       case 5:
         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => FlowLayoutPage(title: contents[index]))
-        );
+            MaterialPageRoute(
+                builder: (context) => FlowLayoutPage(title: contents[index])));
         break;
       case 6:
         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => StackLayoutPage(title: contents[index]))
-        );
+            MaterialPageRoute(
+                builder: (context) => StackLayoutPage(title: contents[index])));
         break;
       case 7:
         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => AlignLayoutPage(title: contents[index]))
-        );
+            MaterialPageRoute(
+                builder: (context) => AlignLayoutPage(title: contents[index])));
         break;
       case 8:
         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => LayoutBuilderPage(title: contents[index]))
-        );
+            MaterialPageRoute(
+                builder: (context) =>
+                    LayoutBuilderPage(title: contents[index])));
         break;
     }
   }
